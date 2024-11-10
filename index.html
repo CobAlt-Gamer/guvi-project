@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Wedding Planning System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Update the navigation bar in the header to include a link to the new guest list page -->
+<header class="header">
+    <h1>Wedding Planning System</h1>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="guest-list.html">Guest List</a></li>
+            <li><a href="#" onclick="showSection('budget')">Budget</a></li>
+            <li><a href="#" onclick="showSection('toDo')">To-Do List</a></li>
+            <li><a href="#" onclick="showSection('vendors')">Vendors</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- Home Section -->
+<section id="home" class="content-section">
+    <h2>Welcome to Your Professional Wedding Planner</h2>
+    <p>Organize your perfect day with our guest list manager, budget calculator, to-do list, and vendor directory.</p>
+</section>
+
+<!-- Guest List Section -->
+<section id="guestList" class="content-section hidden">
+    <h2><i class="fas fa-users"></i> Guest List Manager</h2>
+    <div class="input-group">
+        <input type="text" id="guestName" placeholder="Enter guest name" required>
+        <button onclick="addGuest()">Add Guest</button>
+    </div>
+    <ul id="guestListItems" class="item-list"></ul>
+</section>
+
+<!-- Budget Calculator Section -->
+<section id="budget" class="content-section hidden">
+    <h2><i class="fas fa-calculator"></i> Budget Calculator</h2>
+    <div class="input-group">
+        <input type="text" id="expenseName" placeholder="Expense name" required>
+        <input type="number" id="expenseAmount" placeholder="Amount" required>
+        <button onclick="addExpense()">Add Expense</button>
+    </div>
+    <ul id="budgetItems" class="item-list"></ul>
+    <p class="total-budget">Total Budget: $<span id="totalBudget">0</span></p>
+</section>
+
+<!-- To-Do List Section -->
+<section id="toDo" class="content-section hidden">
+    <h2><i class="fas fa-tasks"></i> To-Do List</h2>
+    <div class="input-group">
+        <input type="text" id="taskName" placeholder="Enter task" required>
+        <button onclick="addTask()">Add Task</button>
+    </div>
+    <ul id="taskList" class="item-list"></ul>
+</section>
+
+<!-- Vendor Directory Section -->
+<section id="vendors" class="content-section hidden">
+    <h2><i class="fas fa-briefcase"></i> Vendor Directory</h2>
+    <ul id="vendorList" class="vendor-list">
+        <li>🌸 Florist: Blossom Florals</li>
+        <li>📸 Photographer: Capture Moments</li>
+        <li>🍽️ Catering: Gourmet Events</li>
+        <li>🎶 DJ: Party Beats</li>
+    </ul>
+</section>
+
+<footer>
+    <p>&copy; 2024 Wedding Planning System. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
